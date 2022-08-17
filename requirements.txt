@@ -1,0 +1,4 @@
+django==3.2.15
+pandas==1.4.3
+xlrd==2.0.1
+environs==9.5.0

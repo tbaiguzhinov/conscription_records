@@ -1,6 +1,23 @@
-<h2>Log In</h2>
-<form method="post">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <button type="submit">Log In</button>
-</form>
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="card" style="margin: 150px; padding: 50px;">
+  <div>
+    <h2>Login</h2>
+  </div>
+  <form method="post">
+    {% csrf_token %}
+    <div class="card-body" style="margin:50px;">
+      <div class="row">
+        <div class="column" style="padding:10px; width:20%;">Логин:</div>
+        <div class="column">{{ form.username }}</div>
+      </div>
+      <div class="row">
+        <div class="column" style="padding:10px; width:20%;">Пароль:</div>
+        <div class="column">{{ form.password }}</div>
+      </div>
+    </div>
+    <button type="submit">Войти</button>
+  </form>
+</div>
+{% endblock %}
